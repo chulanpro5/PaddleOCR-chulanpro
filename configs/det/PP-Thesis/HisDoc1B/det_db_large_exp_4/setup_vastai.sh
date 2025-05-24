@@ -30,13 +30,13 @@ cd ./train_data/paddle_det_v2_20k_zip/
 
 7z x paddle_det_v2_20k.zip
 
-cd ..
+cd /workspace/PaddleOCR-chulanpro/
 
 cd ./train_data/paddle_det_v2_eval_500_zip/
 
 7z x paddle_det_v2_eval_500.zip
 
-cd ..
+cd /workspace/PaddleOCR-chulanpro/
 
 
 
