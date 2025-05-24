@@ -22,7 +22,7 @@ Global:
 wandb:
   project: PP-Thesis-Det
   entity: trankim147-vnu-hcmus
-  name: det_db_large_exp_4
+  name: det_db_large_exp_4_2
 
 Architecture:
   model_type: det
