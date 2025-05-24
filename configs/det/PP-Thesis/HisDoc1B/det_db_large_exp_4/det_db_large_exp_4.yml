@@ -19,6 +19,11 @@ Global:
   save_res_path: ./checkpoints/det_db/predicts_db.txt
   distributed: true
 
+wandb:
+  project: PP-Thesis-Det
+  entity: trankim147-vnu-hcmus
+  name: det_db_large_exp_4
+
 Architecture:
   model_type: det
   algorithm: DB
