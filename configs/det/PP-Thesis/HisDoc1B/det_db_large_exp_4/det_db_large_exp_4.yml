@@ -9,7 +9,7 @@ Global:
   save_epoch_step: 10
   eval_batch_step:
   - 0
-  - 378
+  - 504
   cal_metric_during_train: false
   checkpoints:
   pretrained_model: https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv5_server_det_pretrained.pdparams
@@ -137,7 +137,7 @@ Train:
   loader:
     shuffle: true
     drop_last: false
-    batch_size_per_card: 4
+    batch_size_per_card: 3
     num_workers: 8
 
 Eval:
