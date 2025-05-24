@@ -1,10 +1,8 @@
 #!/bin/bash
 
-apt-get install -y p7zip-full
-
 git clone https://github.com/chulanpro5/PaddleOCR-chulanpro.git
 # Navigate to the workspace directory
-cd /workspace/PaddleOCR/
+cd /workspace/PaddleOCR-chulanpro/
 
 pip install -r requirements.txt
 
