@@ -5,7 +5,7 @@ Global:
   epoch_num: &epoch_num 15
   log_smooth_window: 20
   print_batch_step: 10
-  save_model_dir: ./output/det_db_large_exp_5_continue
+  save_model_dir: ./output/det_db_large_exp_5
   save_epoch_step: 10
   eval_batch_step:
   - 1751
