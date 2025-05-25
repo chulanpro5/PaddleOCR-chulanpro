@@ -1,17 +1,17 @@
 Global:
-  model_name: det_db_large_exp_5
+  model_name: det_db_large_exp_5_continue
   debug: false
   use_gpu: true
-  epoch_num: &epoch_num 10
+  epoch_num: &epoch_num 5
   log_smooth_window: 20
   print_batch_step: 10
-  save_model_dir: ./output/det_db_large_exp_5
+  save_model_dir: ./output/det_db_large_exp_5_continue
   save_epoch_step: 10
   eval_batch_step:
   - 1751
   - 1751
   cal_metric_during_train: false
-  checkpoints: null
+  checkpoints: ./output/det_db_large_exp_5/latest
   pretrained_model: null
   save_inference_dir: null
   use_visualdl: false
@@ -22,7 +22,7 @@ Global:
 wandb:
   project: PP-Thesis-Det
   entity: trankim147-vnu-hcmus
-  name: det_db_large_exp_5
+  name: det_db_large_exp_5_continue
 
 Architecture:
   model_type: det
@@ -55,8 +55,8 @@ Optimizer:
   beta2: 0.999
   lr:
     name: Cosine
-    learning_rate: 0.001 #(8*8c)
-    warmup_epoch: 2
+    learning_rate: 0.0001 #(8*8c)
+    warmup_epoch: 0
   regularizer:
     name: L2
     factor: 1e-6
