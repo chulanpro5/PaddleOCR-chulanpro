@@ -75,9 +75,9 @@ Metric:
 Train:
   dataset:
     name: SimpleDataSet
-    data_dir: ./train_data/paddle_det_v2_200k_zip/paddle_det_v2_200k/
+    data_dir: ./train_data/paddle_det_v2_40k_zip/paddle_det_v2_40k/
     label_file_list:
-      - ./train_data/paddle_det_v2_200k_zip/paddle_det_v2_200k/train.txt
+      - ./train_data/paddle_det_v2_40k_zip/paddle_det_v2_40k/train.txt
     ratio_list: [1.0]
     transforms:
     - DecodeImage:
