@@ -31,9 +31,15 @@ Architecture:
   Backbone:
     name: PPHGNetV2_B4
     det: True
+    stage_config_det:
+      # in_channels, mid_channels, out_channels, num_blocks, is_downsample, light_block, kernel_size, layer_num, stride
+      stage1: [72, 72, 192, 1, True, False, 3, 6, [2, 1]]
+      stage2: [192, 144, 768, 1, True, False, 3, 6, [1, 2]]
+      stage3: [768, 288, 1536, 3, True, True, 5, 6, [2, 1]]
+      stage4: [1536, 576, 2048, 1, True, True, 5, 6, [2, 2]]
   Neck:
     name: LKPAN
-    out_channels: 256
+    out_channels: 384
     intracl: true
   Head:
     name: PFHeadLocal

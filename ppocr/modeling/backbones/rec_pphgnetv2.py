@@ -1512,16 +1512,15 @@ def PPHGNetV2_B3(pretrained=False, use_ssld=False, **kwargs):
     )
     return model
 
-
 def PPHGNetV2_B4(pretrained=False, use_ssld=False, det=False, text_rec=False, **kwargs):
     """
     PPHGNetV2_B4
     Args:
-        pretrained (bool/str): If `True` load pretrained parameters, `False` otherwise.
+        pretrained (bool/str): If True load pretrained parameters, False otherwise.
                     If str, means the path of the pretrained model.
         use_ssld (bool) Whether using ssld pretrained model when pretrained is True.
     Returns:
-        model: nn.Layer. Specific `PPHGNetV2_B4` model depends on args.
+        model: nn.Layer. Specific PPHGNetV2_B4 model depends on args.
     """
     stage_config_rec = {
         # in_channels, mid_channels, out_channels, num_blocks, is_downsample, light_block, kernel_size, layer_num, stride
@@ -1538,6 +1537,10 @@ def PPHGNetV2_B4(pretrained=False, use_ssld=False, det=False, text_rec=False, **
         "stage3": [512, 192, 1024, 3, True, True, 5, 6, 2],
         "stage4": [1024, 384, 2048, 1, True, True, 5, 6, 2],
     }
+
+    if kwargs.get("stage_config_det") and text_rec:
+        stage_config_det = kwargs.get("stage_config_det")
+
     model = PPHGNetV2(
         stem_channels=[3, 32, 48],
         stage_config=stage_config_det if det else stage_config_rec,
