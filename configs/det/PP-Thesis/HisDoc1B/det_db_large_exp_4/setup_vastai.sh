@@ -24,7 +24,7 @@ huggingface-cli download PPThes/datasets \
 # mv  ./train_data/rec/paddle_v5_ss1/train ./train_data/rec
 # mv  ./train_data/rec/paddle_v_ss1/val ./train_data/rec
 
-wandb login 3490b1643699f6bb61887e484c8cfd1aa4cac0e1
+wandb login <wab_token>
 
 # unzip
 
