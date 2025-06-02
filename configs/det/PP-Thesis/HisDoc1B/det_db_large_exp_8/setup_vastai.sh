@@ -11,7 +11,7 @@ pip install -r requirements.txt
 # Hugging Face dataset
 huggingface-cli download chulanpro5/datasets \
   --repo-type dataset \
-  --include "paddle_det_v2_20k_zip/*" \
+  --include "paddle_det_v2_100k_zip/*" \
   --local-dir ./train_data/ \
   --token=<token>
 
@@ -30,9 +30,9 @@ wandb login <wab_token>
 
 # unzip
 
-cd ./train_data/paddle_det_v2_20k_zip/
+cd ./train_data/paddle_det_v2_100k_zip/
 
-7z x paddle_det_v2_20k.zip -mmt=on
+7z x paddle_det_v2_100k.zip -mmt=on
 
 cd /workspace/PaddleOCR-chulanpro/
 

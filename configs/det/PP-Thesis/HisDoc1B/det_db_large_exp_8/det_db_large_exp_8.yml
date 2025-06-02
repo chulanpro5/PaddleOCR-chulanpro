@@ -8,8 +8,8 @@ Global:
   save_model_dir: ./output/det_db_large_exp_8
   save_epoch_step: 10
   eval_batch_step:
-  - 613
-  - 613
+  - 766
+  - 766
   cal_metric_during_train: false
   checkpoints: null
   pretrained_model: null
@@ -29,8 +29,9 @@ Architecture:
   algorithm: DB++
   Transform: null
   Backbone:
-    name: PPHGNetV2_B4
-    det: True
+    name: PPHGNetV2_B5
+    pretrained: True
+    use_ssld: True
   Neck:
     name: LKPAN
     out_channels: 384
@@ -40,7 +41,6 @@ Architecture:
     k: 50
     mode: "large"
     
-
 Loss:
   name: DBLoss
   balance_loss: true
@@ -55,7 +55,7 @@ Optimizer:
   beta2: 0.999
   lr:
     name: Cosine
-    learning_rate: 0.0001 #(8*8c)
+    learning_rate: 0.001 #(8*8c)
     warmup_epoch: 2
   regularizer:
     name: L2
@@ -75,9 +75,9 @@ Metric:
 Train:
   dataset:
     name: SimpleDataSet
-    data_dir: ./train_data/paddle_det_v2_20k_zip/paddle_det_v2_20k/
+    data_dir: ./train_data/paddle_det_v2_100k_zip/paddle_det_v2_100k/
     label_file_list:
-      - ./train_data/paddle_det_v2_20k_zip/paddle_det_v2_20k/train.txt
+      - ./train_data/paddle_det_v2_100k_zip/paddle_det_v2_100k/train.txt
     ratio_list: [1.0]
     transforms:
     - DecodeImage:
