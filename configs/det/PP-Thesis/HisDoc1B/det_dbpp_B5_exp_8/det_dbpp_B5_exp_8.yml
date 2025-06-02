@@ -1,11 +1,11 @@
 Global:
-  model_name: det_db_large_exp_8
+  model_name: det_dbpp_B5_exp_8
   debug: false
   use_gpu: true
   epoch_num: &epoch_num 10
   log_smooth_window: 20
   print_batch_step: 10
-  save_model_dir: ./output/det_db_large_exp_8
+  save_model_dir: ./output/det_dbpp_B5_exp_8
   save_epoch_step: 10
   eval_batch_step:
   - 1532
@@ -22,7 +22,7 @@ Global:
 wandb:
   project: PP-Thesis-Det
   entity: trankim147-vnu-hcmus
-  name: det_db_large_exp_8
+  name: det_dbpp_B5_exp_8
 
 Architecture:
   model_type: det
