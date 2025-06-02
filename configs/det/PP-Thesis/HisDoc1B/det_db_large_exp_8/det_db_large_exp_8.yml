@@ -30,6 +30,7 @@ Architecture:
   Transform: null
   Backbone:
     name: PPHGNetV2_B5
+    det: True
     pretrained: True
     use_ssld: True
   Neck:

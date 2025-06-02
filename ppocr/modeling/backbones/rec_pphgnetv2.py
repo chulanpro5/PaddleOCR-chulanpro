@@ -1552,7 +1552,7 @@ def PPHGNetV2_B4(pretrained=False, use_ssld=False, det=False, text_rec=False, **
     return model
 
 
-def PPHGNetV2_B5(pretrained=False, use_ssld=False, **kwargs):
+def PPHGNetV2_B5(pretrained=False, use_ssld=False, det=False, text_rec=False, **kwargs):
     """
     PPHGNetV2_B5
     Args:
@@ -1571,7 +1571,12 @@ def PPHGNetV2_B5(pretrained=False, use_ssld=False, **kwargs):
     }
 
     model = PPHGNetV2(
-        stem_channels=[3, 32, 64], stage_config=stage_config, use_lab=False, **kwargs
+        stem_channels=[3, 32, 64],
+        stage_config=stage_config,
+        use_lab=False,
+        det=det,
+        text_rec=text_rec,
+        **kwargs,
     )
     return model
 
