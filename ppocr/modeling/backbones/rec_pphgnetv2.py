@@ -1564,10 +1564,10 @@ def PPHGNetV2_B5(pretrained=False, use_ssld=False, det=False, text_rec=False, **
     """
     stage_config = {
         # in_channels, mid_channels, out_channels, num_blocks, is_downsample, light_block, kernel_size, layer_num
-        "stage1": [64, 64, 128, 1, False, False, 3, 6],
-        "stage2": [128, 128, 512, 2, True, False, 3, 6],
-        "stage3": [512, 256, 1024, 5, True, True, 5, 6],
-        "stage4": [1024, 512, 2048, 2, True, True, 5, 6],
+        "stage1": [64, 64, 128, 1, False, False, 3, 6, 2],
+        "stage2": [128, 128, 512, 2, True, False, 3, 6, 2],
+        "stage3": [512, 256, 1024, 5, True, True, 5, 6, 2],
+        "stage4": [1024, 512, 2048, 2, True, True, 5, 6, 2],
     }
 
     model = PPHGNetV2(
