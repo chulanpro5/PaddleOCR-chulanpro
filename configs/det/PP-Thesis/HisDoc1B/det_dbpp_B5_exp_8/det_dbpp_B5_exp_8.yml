@@ -22,7 +22,7 @@ Global:
 wandb:
   project: PP-Thesis-Det
   entity: trankim147-vnu-hcmus
-  name: det_dbpp_B5_exp_8
+  name: det_dbpp_B5_exp_8_continue
 
 Architecture:
   model_type: det
