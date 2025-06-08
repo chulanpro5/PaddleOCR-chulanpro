@@ -1,11 +1,11 @@
 Global:
-  model_name: det_db_b4_finetune_exp_11
+  model_name: det_db_b4_scratch_exp_11
   debug: false
   use_gpu: true
   epoch_num: &epoch_num 20
   log_smooth_window: 20
   print_batch_step: 10
-  save_model_dir: ./output/det_db_b4_finetune_exp_11
+  save_model_dir: ./output/det_db_b4_scratch_exp_11
   save_epoch_step: 10
   eval_batch_step:
   - 0
@@ -22,7 +22,7 @@ Global:
 wandb:
   project: PP-Thesis-Det
   entity: trankim147-vnu-hcmus
-  name: det_db_b4_finetune_exp_11
+  name: det_db_b4_scratch_exp_11
 
 Architecture:
   model_type: det
