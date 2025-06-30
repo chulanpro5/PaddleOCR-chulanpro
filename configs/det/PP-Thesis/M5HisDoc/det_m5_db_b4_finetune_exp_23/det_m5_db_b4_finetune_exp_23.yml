@@ -9,7 +9,7 @@ Global:
   save_epoch_step: 10
   eval_batch_step:
   - 0
-  - 285
+  - 57
   cal_metric_during_train: false
   checkpoints: null
   pretrained_model: ./output/det_db_b4_finetune_exp_20/best_accuracy.pdparams
