@@ -2,14 +2,14 @@ Global:
   model_name: det_m5_db_b4_finetune_exp_23
   debug: false
   use_gpu: true
-  epoch_num: &epoch_num 10
+  epoch_num: &epoch_num 50
   log_smooth_window: 20
   print_batch_step: 10
   save_model_dir: ./output/det_m5_db_b4_finetune_exp_23
   save_epoch_step: 10
   eval_batch_step:
   - 0
-  - 57
+  - 285
   cal_metric_during_train: false
   checkpoints: null
   pretrained_model: ./output/det_db_b4_finetune_exp_20/best_accuracy.pdparams
@@ -20,7 +20,7 @@ Global:
   distributed: true
 
 wandb:
-  project: PP-Thesis-Det
+  project: PP-Thesis-Det-M5HisDoc
   entity: trankim147-vnu-hcmus
   name: det_m5_db_b4_finetune_exp_23
 
