@@ -9,7 +9,7 @@ Global:
   save_epoch_step: 10
   eval_batch_step:
   - 0
-  - 57
+  - 285
   cal_metric_during_train: false
   checkpoints: null
   pretrained_model: ./output/det_db_b4_finetune_exp_20/best_accuracy.pdparams
@@ -152,6 +152,8 @@ Eval:
         channel_first: false
     - DetLabelEncode: null
     - DetResizeForTest:
+        limit_type: "max"
+        limit_side_len: 1280
     - NormalizeImage:
         scale: 1./255.
         mean:
